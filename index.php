@@ -34,7 +34,7 @@ include('./src/header.php');
 </section>
 
 <?php
-include"competence.php";
+include"src/competence.php";
 ?>
 
 <section id="experience">
