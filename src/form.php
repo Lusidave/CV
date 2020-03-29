@@ -1,7 +1,7 @@
 <?php
     $firstname = $name = $email = $phone = $message = "";
     $firstnameError = $nameError = $emailError = $phoneError = $messageError = "";
-    $
+
 
      if($_SERVER["REQUEST_METHOD"] == "POST")
     {
@@ -62,7 +62,7 @@
     </div>
     <div class="row">
         <div class="col-lg-10 col-lg-offset-1">
-            <form id="contact-form" method="post" action="thanks.php" role="form">
+            <form id="contact-form" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" role="form">
                 <div class="row">
 
 
