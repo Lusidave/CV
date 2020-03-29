@@ -1,8 +1,9 @@
 <?php
     $firstname = $name = $email = $phone = $message = "";
     $firstnameError = $nameError = $emailError = $phoneError = $messageError = "";
+    $
 
-    if($_SERVER["REQUEST_METHOD"] == "POST")
+     if($_SERVER["REQUEST_METHOD"] == "POST")
     {
         $firstname = verifyInput($_POST["firstname"]);
         $name = verifyInput($_POST["name"]);
@@ -22,7 +23,19 @@
         {
             $messageError = "Qu'est ce que tu veux me dire ?";
         }
+        if(!isEmail($email))
+        {
+            $emailError = "T'essaies de me rouler ? C'est pas un email ça !";
+        }
+        if(!isPhone($phone))
+        {
+            $phoneError = "Que des chiffres et des espaces, stp...";
+        }
+    }
 
+    function isPhone($var)
+    {
+        return preg_match("/^[0-9 ]*$/", $var);
     }
 
     function isEmail($var)
@@ -49,8 +62,9 @@
     </div>
     <div class="row">
         <div class="col-lg-10 col-lg-offset-1">
-            <form id="contact-form" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" role="form">
+            <form id="contact-form" method="post" action="thanks.php" role="form">
                 <div class="row">
+
 
                     <div class="col-md-6">
                         <label for="firstname">Prénom<span class="blue"> *</span></label>
@@ -67,13 +81,13 @@
                     <div class="col-md-6">
                         <label for="email">Email<span class="blue"> *</span></label>
                         <input type="email" id="email" name="email" class="form-control" placeholder="Votre email" value="<?php echo $email; ?>">
-                        <p class="comments"></p>
+                        <p class="comments"><?php echo $emailError; ?></p>
                     </div>
 
                     <div class="col-md-6">
                         <label for="phone">Téléphone</label>
                         <input type="tel" id="phone" name="phone" class="form-control" placeholder="Votre téléphone" value="<?php echo $phone; ?>">
-                        <p class="comments"></p>
+                        <p class="comments"><?php echo $phoneError; ?></p>
                     </div>
 
                     <div class="col-md-12">
