@@ -60,7 +60,7 @@ ul,ol
 /* MENU */
 .navbar
 {
-    background: #778899;
+    background-image: linear-gradient(to right, #1E3871, #B9C6FF, #1E3871);
     font-size: 12px;
     letter-spacing: 4px;
     text-transform: uppercase;
@@ -105,13 +105,12 @@ ul,ol
     background-attachment: fixed;
     background-repeat: no-repeat;
     padding: 160px 0 255px 0;
-    border: 2px solid green;
     display: flex;
     justify-content: space-around;
 }
 #justine
 {
-    border: 2px solid hotpink;
+   /* border: 2px solid hotpink;*/
     width: 25%;
     padding: 0 5em 5em 5em;
     margin-left: 15%;
@@ -119,33 +118,38 @@ ul,ol
 }
 #justine2
 {
-    border: 2px solid blue;
+   /* border: 2px solid blue;*/
     width: 50%;
     display: flex;
     justify-content: center;
+
 }
 #will
 {
-    border: 2px solid red;
+  /*  border: 2px solid red;*/
     color: white;
-    width: 70%;
+    width: 90%;
     display: flex;
     flex-direction: column;
 }
 #will h1
 {
-    font-size: 55px;
+    font-size: 50px;
+    text-shadow: -4px 2px 7px black;
+    text-transform: uppercase;
 }
 #will h3
 {
-    font-size: 40px;
+    font-size: 35px;
+    text-shadow: -4px 2px 15px black;
+
 }
 #will a
 {
-    border: 2px solid green;
+   /* border: 2px solid green; */
     margin-top: 40px;
     font-size: 20px;
-    
+
 }
 
 
@@ -196,7 +200,7 @@ ul,ol
 /* SKILLS */
 #skills
 {
-    background-image: linear-gradient(to right, #f1e9e9 -40%, #778899 100%);
+    background-image: linear-gradient(to right, #1E3871, #B9C6FF, #1E3871);
 }
 #skills .heading h2
 {
@@ -210,7 +214,7 @@ ul,ol
 }
 #skills .progress-bar
 {
-    background: rgba(67, 37, 114, 0.644);
+    background-image: linear-gradient(0.5turn, #6860AB, #1E3871);
 }
 #skills .progress h5
 {
@@ -221,7 +225,7 @@ ul,ol
 
 #experience
 {
-    background-image: linear-gradient(to right, #f1e9e9 -40%, #778899 100%);
+    background-image: linear-gradient(to right, #1E3871, #B9C6FF, #1E3871);
 }
 #experience .heading h2
 {
@@ -331,7 +335,7 @@ ul,ol
 
 #education
 {
-    background-image: linear-gradient(to right, #f1e9e9 -40%, #778899 100%);
+    background-image: linear-gradient(to right, #1E3871, #B9C6FF, #1E3871);
 }
 #education .heading h2
 {
@@ -378,7 +382,7 @@ ul,ol
 /* PORTFOLIO */
 #portfolio
 {
-    background-image: linear-gradient(to right, #f1e9e9 -40%, #778899 100%);
+    background-image: linear-gradient(to right, #1E3871, #B9C6FF, #1E3871);
 }
 #portfolio .heading h2
 {
@@ -400,7 +404,7 @@ ul,ol
 
 #recommandations
 {
-    background-image: linear-gradient(to right, #f1e9e9 -40%, #778899 100%);
+    background-image: linear-gradient(to right, #1E3871, #B9C6FF, #1E3871);
 }
 #recommandations .heading h2
 { 
