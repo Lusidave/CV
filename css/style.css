@@ -101,6 +101,57 @@ ul,ol
 
 #about
 {
+    background-image: url("/images/91.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    padding: 160px 0 255px 0;
+    border: 2px solid green;
+    display: flex;
+    justify-content: space-around;
+}
+#justine
+{
+    border: 2px solid hotpink;
+    width: 25%;
+    padding: 0 5em 5em 5em;
+    margin-left: 15%;
+
+}
+#justine2
+{
+    border: 2px solid blue;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+#will
+{
+    border: 2px solid red;
+    color: white;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+#will h1
+{
+    font-size: 55px;
+}
+#will h3
+{
+    font-size: 40px;
+}
+#will a
+{
+    border: 2px solid green;
+    margin-top: 40px;
+    font-size: 20px;
+    
+}
+
+
+/*
+#about
+{
     padding-top: 100px;
     background-image: linear-gradient(to right, #f1e9e9 -40%, #778899 100%);
 }
@@ -137,6 +188,10 @@ ul,ol
     color: #d82c2e;
     text-decoration: none;
 }
+
+*/
+
+
 
 /* SKILLS */
 #skills

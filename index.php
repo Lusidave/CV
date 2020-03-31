@@ -21,6 +21,7 @@
 include('./src/header.php');
 ?>
 
+<!--
 <section id="about" class="container-fluid">
     <div class="col-xs-8 cold-md-4 profile-picture">
         <img src="images/me.jpg" alt="David" class="img-circle">
@@ -32,6 +33,13 @@ include('./src/header.php');
 
     </div>
 </section>
+-->
+
+
+    <?php
+    include("./src/Justine.php");
+    ?>
+
 
 <section id="skills">
     <div class="red-divider"></div>
