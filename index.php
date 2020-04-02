@@ -243,30 +243,14 @@ include('./src/header.php');
         <div class="heading">
             <h2>Recommandations</h2>
         </div>
-        <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner" role="listbox">
-                <div class="item active">
-                    <h3>A venir ...</h3>
-                </div>
-                <div class="item">
-                    <h3>A venir ...</h3>
-                </div>
-                <div class="item">
-                    <h3>A venir ...</h3>
-                </div>
-            </div>
-            <a class="left carousel-control" href="#myCarousel" data-slide="prev" role="button">
-                <span class="glyphicon glyphicon-chevron-left"></span></a>
-            <a class="right carousel-control" href="#myCarousel" data-slide="next" role="button">
-                <span class="glyphicon glyphicon-chevron-right"></span></a>
 
-        </div>
+
+        <?php
+        include('./src/livre_dor.php');
+        ?>
+
     </div>
+
 </section>
 
 </body>
