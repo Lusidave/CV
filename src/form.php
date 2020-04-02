@@ -170,7 +170,7 @@ $cvLuzi = $statement->fetchAll(PDO::FETCH_ASSOC);
                        <input type="submit" id="send" name="send" class="button1" value="Envoyer">
                     </div>
                 </div>
-                <p class="thank-you" >Votre message a bien été envoyé. Merci de m'avoir contacté :)</p>
+               <!-- <p class="thank-you" >Votre message a bien été envoyé. Merci de m'avoir contacté :)</p> -->
                <!-- style="display:<?php /*if($isSuccess) echo 'block'; else echo 'none';*/?>" -->
             </form>
         </div>
@@ -178,26 +178,29 @@ $cvLuzi = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 </div>
 </section>
+<div id="thanks">
+
+
 
 <?php
 
-if($_POST['send']=='send'){
+if(@$_POST['send']<>''){
 
-    $firstname = trim($_POST['firstname']);
-    $nom = trim($_POST['nom']);
-    $email = trim($_POST['email']);
-    $phone = trim($_POST['phone']);
-    $message = trim($_POST['message']);
-    $query = 'INSERT INTO userForm (firstname, nom, email, phone, message) VALUES (:firstname, :nom, :email, :phone, :message)';
+
+    echo "Votre message a bien été envoyé " . $_POST['firstname'] . " " . $_POST["nom"] . " Merci de m'avoir contacté ! :) "."<br/>";
+    echo    "Je reviendrai vers vous via votre adresse mail " . $_POST['email'];
+
+
+    $query = 'INSERT INTO userForm VALUES (NULL, :firstname, :nom, :email, :phone, :message)';
     $statement = $pdo->prepare($query);
 
-    $statement->bindValue(':firstname', $firstname, \PDO::PARAM_STR);
-    $statement->bindValue(':nom', $nom, \PDO::PARAM_STR);
-    $statement->bindValue(':email', $email, \PDO::PARAM_STR);
-    $statement->bindValue(':phone', $phone, \PDO::PARAM_INT);
-    $statement->bindValue(':message', $message, \PDO::PARAM_STR);
-
+    $statement->bindValue(':firstname', $_POST['firstname'], \PDO::PARAM_STR);
+    $statement->bindValue(':nom', $_POST['nom'], \PDO::PARAM_STR);
+    $statement->bindValue(':email', $_POST['email'], \PDO::PARAM_STR);
+    $statement->bindValue(':phone', $_POST['phone'], \PDO::PARAM_INT);
+    $statement->bindValue(':message', $_POST['message'], \PDO::PARAM_STR);
 
     $statement->execute();
-};
+}
 ?>
+</div>

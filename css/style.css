@@ -27,7 +27,7 @@ section .heading h2
 }
 .red-divider
 {
-    width: 90%;
+    width: 77%;
     height: 2px;
     background: black;
     margin: 0 auto;
@@ -110,7 +110,7 @@ ul,ol
 }
 #justine
 {
-   /* border: 2px solid hotpink;*/
+  /*  border: 2px solid hotpink;*/
     width: 25%;
     padding: 0 5em 5em 5em;
     margin-left: 15%;
@@ -118,7 +118,7 @@ ul,ol
 }
 #justine2
 {
-   /* border: 2px solid blue;*/
+  /*  border: 2px solid blue;*/
     width: 50%;
     display: flex;
     justify-content: center;
@@ -126,7 +126,7 @@ ul,ol
 }
 #will
 {
-  /*  border: 2px solid red;*/
+   /* border: 2px solid red;*/
     color: white;
     width: 90%;
     /*display: flex;*/
@@ -498,12 +498,13 @@ ul,ol
     display: block;
 }
 
-.thank-you
+#thanks
 {
+    background-image: linear-gradient(to right, #1E3871, #B9C6FF, #1E3871);
     text-align: center;
-    margin-top: 15px;
     font-weight: bold;
     font-size: 22px;
+    text-shadow: -4px 2px 7px white;
 }
 
 
@@ -533,6 +534,15 @@ footer h5
 
 @media (max-width: 768px)
 {
+    *
+    {
+        margin: 0;
+        padding: 0;
+    }
+    body
+    {
+        width: 100%;
+    }
     .timeline:before
     {
         left: 30px;
@@ -557,6 +567,54 @@ footer h5
         left: -14px;
         right: auto;
     }
+    #about
+    {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 600px;
+        justify-content: center;
+
+    }
+    #justine
+    {
+        order: -1;
+        margin: 3% 0 0 0;
+        padding: 0 0 0 10%;
+        align-items: center;
+        width: 70%;
+
+
+    }
+    #justine2
+    {
+        width: 90%;
+    }
+    #justine2 h1
+    {
+        font-size: 25px;
+
+    }
+    #justine2 h3
+    {
+        font-size: 20px;
+    }
+    #will
+    {
+        width: 100%;
+    }
+    .button1
+    {
+        text-shadow: 5px 5px 8px black;
+    }
+    #nav
+    {
+        width: 100%;
+    }
+
+
 }
 
 
