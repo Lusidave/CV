@@ -5,5 +5,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="PHP 2.0" />
+    <orderEntry type="module" module-name="Checkpointun" />
   </component>
 </module>

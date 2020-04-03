@@ -122,7 +122,7 @@ $cvLuzi = $statement->fetchAll(PDO::FETCH_ASSOC);
     <div class="row">
         <div class="col-lg-10 col-lg-offset-1">
             <form enctype="multipart/form-data" id="contact-form" method="post" action="#contact" role="form">
-                 <?php /*echo htmlspecialchars($_SERVER['PHP_SELF']);*/ ?>
+                 <?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>
                 <div class="row">
 
 
@@ -201,6 +201,8 @@ if(@$_POST['send']<>''){
     $statement->bindValue(':message', $_POST['message'], \PDO::PARAM_STR);
 
     $statement->execute();
+
+
 }
 ?>
 </div>
