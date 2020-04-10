@@ -17,7 +17,7 @@
 
         if(empty($firstname))
         {
-            $firstnameError = "Je veux connaitre ton prénom !";
+            $firstname Error = "Je veux connaitre ton prénom !";
             $isSuccess = false;
         }
         else {
@@ -122,15 +122,13 @@ $cvLuzi = $statement->fetchAll(PDO::FETCH_ASSOC);
     <div class="row">
         <div class="col-lg-10 col-lg-offset-1">
             <form enctype="multipart/form-data" id="contact-form" method="post" action="#contact" role="form">
-                 <?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>
+                 <?php //echo htmlspecialchars($_SERVER['PHP_SELF']); ?>
                 <div class="row">
-
-
                     <div class="col-md-6">
                         <label for="firstname">Prénom<span class="blue"> *</span></label>
                         <input type="text" id="firstname" name="firstname" class="form-control" placeholder="Votre prénom" value=""> <?php /*echo $firstname;*/ ?>
                         <p class="comments"></p>
-                        <?php /*echo $firstnameError;*/ ?>
+                        <?php /*echo $firstname Error;*/ ?>
                     </div>
 
                     <div class="col-md-6">
@@ -183,26 +181,33 @@ $cvLuzi = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 
 <?php
-
-if(@$_POST['send']<>''){
-
-
-    echo "Votre message a bien été envoyé " . $_POST['firstname'] . " " . $_POST["nom"] . " Merci de m'avoir contacté ! :) "."<br/>";
-    echo    "Je reviendrai vers vous via votre adresse mail " . $_POST['email'];
-
-
-    $query = 'INSERT INTO userForm VALUES (NULL, :firstname, :nom, :email, :phone, :message)';
-    $statement = $pdo->prepare($query);
-
-    $statement->bindValue(':firstname', $_POST['firstname'], \PDO::PARAM_STR);
-    $statement->bindValue(':nom', $_POST['nom'], \PDO::PARAM_STR);
-    $statement->bindValue(':email', $_POST['email'], \PDO::PARAM_STR);
-    $statement->bindValue(':phone', $_POST['phone'], \PDO::PARAM_INT);
-    $statement->bindValue(':message', $_POST['message'], \PDO::PARAM_STR);
-
-    $statement->execute();
-
-
-}
+var_dump($_POST['send']);
+    if($_POST['firstname']=='' || $_POST['firstname'] == ''){
+        echo 'remplis ton prénom triso';
+    }
+    elseif($_POST['nom']=='' || $_POST['nom'] == ''){
+        echo 'remplis ton nom triso';
+    }
+    elseif($_POST['email']=='' || $_POST['email'] == ''){
+        echo 'remplis ton mail triso';
+    }
+    elseif($_POST['phone']=='' || $_POST['phone'] == ''){
+        echo 'remplis ton phone triso';
+    }
+    elseif($_POST['message']=='' || $_POST['message'] == ''){
+    echo 'remplis ton message triso';
+    }
+    else {
+        echo "Votre message a bien été envoyé " . $_POST['firstname'] . " " . $_POST["nom"] . " Merci de m'avoir contacté ! :) " . "<br/>";
+        echo "Je reviendrai vers vous via votre adresse mail " . $_POST['email'];
+        $query = 'INSERT INTO userForm VALUES (NULL, :firstname, :nom, :email, :phone, :message)';
+        $statement = $pdo->prepare($query);
+        $statement->bindValue(':firstname', $_POST['firstname'], \PDO::PARAM_STR);
+        $statement->bindValue(':nom', $_POST['nom'], \PDO::PARAM_STR);
+        $statement->bindValue(':email', $_POST['email'], \PDO::PARAM_STR);
+        $statement->bindValue(':phone', $_POST['phone'], \PDO::PARAM_INT);
+        $statement->bindValue(':message', $_POST['message'], \PDO::PARAM_STR);
+        $statement->execute();
+    }
 ?>
 </div>

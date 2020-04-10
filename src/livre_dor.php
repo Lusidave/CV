@@ -2,20 +2,14 @@
 require_once 'connec.php';
 
 if (@$_POST['poster'] <> '') {
-
-
     $query = 'INSERT INTO livredor VALUES (NULL, :pseudo, :message)';
     $statement = $pdo->prepare($query);
-
     $statement->bindValue(':pseudo', $_POST['pseudo'], \PDO::PARAM_STR);
     $statement->bindValue(':message', $_POST['message'], \PDO::PARAM_STR);
-
     $statement->execute();
-
-    echo $_POST['pseudo'] . " : <br/>" . $_POST["message"];
 }
 
-$query = "SELECT * FROM livredor ORDER BY id ASC LIMIT 0,3";
+$query = "SELECT * FROM livredor ORDER BY id DESC LIMIT 3";
 $statement = $pdo->query($query);
 $cvLuzi = $statement->fetchAll(PDO::FETCH_ASSOC);
 
@@ -46,11 +40,6 @@ $cvLuzi = $statement->fetchAll(PDO::FETCH_ASSOC);
     </form>
 </div>
 
-
-
-<?php
-//var_dump($cvLuzi);
-?>
 <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
     <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -81,10 +70,6 @@ $cvLuzi = $statement->fetchAll(PDO::FETCH_ASSOC);
         <span class="glyphicon glyphicon-chevron-right"></span></a>
 
 </div>
-
-
-
-
 </div>
 
 

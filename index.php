@@ -244,7 +244,6 @@ include('./src/header.php');
             <h2>Recommandations</h2>
         </div>
 
-
         <?php
         include('./src/livre_dor.php');
         ?>

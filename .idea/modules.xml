@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../Documents/WCS/BootStrap/.idea/BootStrap.iml" filepath="$PROJECT_DIR$/../Documents/WCS/BootStrap/.idea/BootStrap.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/CV.iml" filepath="$PROJECT_DIR$/.idea/CV.iml" />
       <module fileurl="file://$PROJECT_DIR$/../Documents/WCS/Checkpointun/.idea/Checkpointun.iml" filepath="$PROJECT_DIR$/../Documents/WCS/Checkpointun/.idea/Checkpointun.iml" />
       <module fileurl="file://$PROJECT_DIR$/../Documents/WCS/WCS/PHP/PHP 2.0/.idea/PHP 2.0.iml" filepath="$PROJECT_DIR$/../Documents/WCS/WCS/PHP/PHP 2.0/.idea/PHP 2.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Documents/WCS/POO - BASICS 1/.idea/POO - BASICS 1.iml" filepath="$PROJECT_DIR$/../Documents/WCS/POO - BASICS 1/.idea/POO - BASICS 1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Documents/WCS/SOUTIEN/.idea/SOUTIEN.iml" filepath="$PROJECT_DIR$/../Documents/WCS/SOUTIEN/.idea/SOUTIEN.iml" />
     </modules>
   </component>
 </project>
