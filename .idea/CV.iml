@@ -4,5 +4,10 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="PHP 2.0" />
+    <orderEntry type="module" module-name="Checkpointun" />
+    <orderEntry type="module" module-name="POO - BASICS 1" />
+    <orderEntry type="module" module-name="BootStrap" />
+    <orderEntry type="module" module-name="SOUTIEN" />
   </component>
 </module>

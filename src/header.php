@@ -1,6 +1,6 @@
 
 
-<nav class="navbar navbar-default navbar-fixed-top">
+<nav id="nav" class="navbar navbar-default navbar-fixed-top">
                 <div class="container">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -17,6 +17,8 @@
                             <li><a href="#education">Education</a></li>
                             <li><a href="#portfolio">Portfolio</a></li>
                             <li><a href="#recommandations">Recommandations</a></li>
+                            <li><a href="#contact">Contact</a></li>
+
                         </ul>
 
                     </div>
