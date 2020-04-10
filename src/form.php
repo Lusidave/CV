@@ -181,7 +181,7 @@ $cvLuzi = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 
 <?php
-var_dump($_POST['send']);
+    if (!empty($_POST['send']))
     if($_POST['firstname']=='' || $_POST['firstname'] == ''){
         echo 'remplis ton prénom triso';
     }
